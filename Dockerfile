@@ -20,8 +20,7 @@ RUN unzip /tmp/pb.zip -d /pb/
 COPY ./pb_data /pb/pb_data
 
 
-# copy static files
-COPY ./pb_public/ /pb/pb_public
+
 
 
 EXPOSE 8080
