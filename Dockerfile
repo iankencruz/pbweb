@@ -23,7 +23,7 @@ RUN unzip /tmp/pb.zip -d /pb/
 COPY ./pb_public/ /pb/pb_public
 
 
-EXPOSE 8090
+EXPOSE 8080
 
 # start PocketBase
-CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8090"]
+CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8080"]
