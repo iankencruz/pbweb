@@ -1,0 +1,17 @@
+---
+import Baselayout from "../layout/Baselayout.astro"
+
+
+
+const response = await fetch('http://localhost:8080/api/collections/case_studies/records')
+const data = await response.json();
+---
+
+<Baselayout>
+  <h1><span>title:</span>{data.items[0].title}</h1>
+
+  <div>slug: {data.items[0].slug}</div>
+
+
+  <span>content: </span><div class="prose" set:html={data.items[0].content} />
+</Baselayout>
