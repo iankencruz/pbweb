@@ -8,10 +8,10 @@ const data = await response.json();
 ---
 
 <Baselayout>
-  <h1><span>title:</span>{data.items[0].title}</h1>
 
-  <div>slug: {data.items[0].slug}</div>
-
-
-  <span>content: </span><div class="prose" set:html={data.items[0].content} />
+  <ul>
+  {data.items.map((item:any) => (
+    <li >{item.title} - {item.slug}</li>
+  ))}
+    </ul>
 </Baselayout>
